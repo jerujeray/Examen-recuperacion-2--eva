@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Security;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -17,6 +18,7 @@ public class MarioScript : MonoBehaviour
     private Animator _animator;
     private Vector2 dir;
     private bool _intentionToJump;
+    
 
     
     private int jumpisremaing;
@@ -72,6 +74,12 @@ public class MarioScript : MonoBehaviour
         }
         #endregion
     }
+        public void animationcontroler() 
+        { 
+         
+         
+        
+        }
    
 
     private void FixedUpdate()
@@ -129,7 +137,7 @@ public class MarioScript : MonoBehaviour
       {
         StartCoroutine(Invulnerable());
         AudioManager.instance.PlayAudio(starClip, "Invulnerable", false, 5f);
-        GameManager.instance.gameObject()
+        //GameManager.instance.gameObject();
       }
 
       IEnumerator Invulnerable()

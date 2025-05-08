@@ -75,8 +75,17 @@ public class MarioScript : MonoBehaviour
         #endregion
     }
         public void animationcontroler() 
-        { 
-         
+        {
+        switch (_animator.Tolower()) 
+          {
+            case "idle":
+                return "CAMINA";
+                    case "JUMP":
+                return "SALTAR";
+            case "RUN":
+                return "SALTAR"
+
+          }
          
         
         }
